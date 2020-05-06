@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4DF33E79-A41A-B9AA-6DC2-CFBAF8EB1B10" name="hrac">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:18:26 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="10D12CB0-ED41-95E0-1101-9C5B2B427CBA">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:19:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prezdivka" id="6B7A6A19-8830-3D3C-8869-12BCA964B1C0">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vyhra_zacinal" id="7D8C1B5C-4D97-097C-EA28-29FA21060D5D">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vyhra_nezacinal" id="08A581CB-150F-48A6-C602-5285EAC1C9D5">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="remiza_zacinal" id="252F7340-84E3-BDA8-A2A1-B22B3CFCB74E">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="remiza_nezacinal" id="6D03DF88-344F-B50D-B821-151EFB01BC00">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prohra_zacinal" id="BCD5EB97-8924-43FB-B062-D744F8C1193A">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prohra_nezacinal" id="C8911927-0870-DE85-A88D-8501F452B642">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:22:50 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B3F1A41-0EDD-678A-53A7-7613B610FA8C" name="PK_hrac_id">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:19:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10D12CB0-ED41-95E0-1101-9C5B2B427CBA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

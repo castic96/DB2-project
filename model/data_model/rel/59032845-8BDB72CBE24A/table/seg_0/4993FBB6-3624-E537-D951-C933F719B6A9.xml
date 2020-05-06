@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4993FBB6-3624-E537-D951-C933F719B6A9" name="omezeni">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:31:52 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="3C3127FB-59F3-7D22-D1D9-EAA123CD4C53">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:39:54 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="radek_max" id="5FFD53A2-D9B6-1F06-E727-CBFCB7235368">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:39:54 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="radek_min" id="7A623BA9-5E4B-08B2-2B0C-0C1B0A20AECC">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:58:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sloupec_max" id="84CF28C7-50DF-B3E4-E3D5-F6CFEF6FCAE4">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:58:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sloupec_min" id="E59270F5-4FAD-F9AB-F7C3-F2F615EB5E8E">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:58:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="symbol_max" id="D9F13831-886A-2DFC-FA81-28AA9C4522D4">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:58:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="symbol_min" id="7033515C-F847-D4D6-076C-20E7AE8BFFA1">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:58:07 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0494A34-00EE-B126-F108-C1210AE125D1" name="PK_omezeni_id">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 14:39:54 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C3127FB-59F3-7D22-D1D9-EAA123CD4C53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

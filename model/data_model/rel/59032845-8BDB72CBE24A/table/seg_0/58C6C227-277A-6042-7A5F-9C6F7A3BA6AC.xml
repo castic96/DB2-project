@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="58C6C227-277A-6042-7A5F-9C6F7A3BA6AC" name="tah">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:23:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="803B7D07-09FF-A69C-DB6B-F3A81BF072EB">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:24:30 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hra_id" id="D1306CF4-9EFF-DEA7-CC71-956BF8BA50AE">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:30:04 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="002814EE-F34F-9F90-6224-67419D286D02" referredColumn="25257035-E31B-DE39-D2FE-F4BB05BB8CA9"/>
+</associations>
+</Column>
+<Column name="hrac_id" id="8E0F6C31-3F08-4261-C9E3-E8A65DF9CE66">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:30:04 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="531280D0-001D-1C58-1EE9-A915C9E04AD1" referredColumn="10D12CB0-ED41-95E0-1101-9C5B2B427CBA"/>
+</associations>
+</Column>
+<Column name="radek_souradnice" id="E946F799-AEBC-DA37-3A71-9AC946BCE2F2">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:30:04 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sloupec_souradnice" id="53DEEA61-7E01-DF11-0EA5-C7CD108C5058">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:30:04 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cas_zacatku" id="8F3B09A8-967D-57FF-B4B5-ABD2DA44F818">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:30:04 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="850E7D94-F2F1-EE6D-1D66-5582C67D01B6" name="PK_tah_id">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:24:30 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="803B7D07-09FF-A69C-DB6B-F3A81BF072EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C249184-2662-D1E1-1862-C2DBFF4DA76F" name="FK_tah__hra_id__hra">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:45:09 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1306CF4-9EFF-DEA7-CC71-956BF8BA50AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FB7D369-F3A4-FBF5-F363-F3EFF6373BA9" name="FK_tah__hrac_id__hrac">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:46:27 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E0F6C31-3F08-4261-C9E3-E8A65DF9CE66"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

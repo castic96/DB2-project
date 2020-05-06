@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="002814EE-F34F-9F90-6224-67419D286D02" containerWithKeyObject="58C6C227-277A-6042-7A5F-9C6F7A3BA6AC" localFKIndex="0C249184-2662-D1E1-1862-C2DBFF4DA76F" name="FK_tah__hra_id__hra">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:45:09 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<referredTableLongName>hra</referredTableLongName>
+<deleteRule>RESTRICT</deleteRule>
+<referredTableID>019B3A85-CEF3-0AAB-5B5D-3F499800F729</referredTableID>
+<keyObject>49C4655C-94C4-67F0-6213-D8051CFF20C2</keyObject>
+<referredKeyID>49C4655C-94C4-67F0-6213-D8051CFF20C2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="data_model" id="F9DB414A-45B3-C97D-3548-4DE61CC34073" version="3.5">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-05 07:49:24 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F9DB414A-45B3-C97D-3548-4DE61CC34073</designId>
+</OSDM_Design>
