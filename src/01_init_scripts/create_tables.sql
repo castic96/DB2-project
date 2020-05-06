@@ -60,7 +60,7 @@ CREATE TABLE tah (
     hrac_id              INTEGER NOT NULL,
     radek_souradnice     INTEGER NOT NULL,
     sloupec_souradnice   INTEGER NOT NULL,
-    cas_zacatku          TIMESTAMP NOT NULL
+    cas_zacatku          TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
 ALTER TABLE tah ADD CONSTRAINT pk_tah_id PRIMARY KEY ( id );
