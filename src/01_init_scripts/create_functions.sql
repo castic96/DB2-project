@@ -367,3 +367,48 @@ BEGIN
     
 END;
 /
+
+--
+-- Funkce, ktera vraci cislo urcujici, kolik sekund hral dany hrac danou hru.
+--
+CREATE OR REPLACE FUNCTION herni_cas ( hra_id IN INTEGER, hrac_id IN INTEGER ) RETURN INTEGER AS
+
+hra_radek hra%ROWTYPE;
+
+cas_sekundy INTEGER := 0;
+casova_znacka_oponent TIMESTAMP;
+
+CURSOR tah_kurzor ( hra_id_kurzor IN INTEGER ) IS
+    SELECT * 
+    FROM tah
+    WHERE tah.hra_id = hra_id_kurzor 
+    ORDER BY tah.id;
+    
+BEGIN
+
+    FOR tah_radek IN tah_kurzor ( hra_id ) LOOP
+        
+        IF tah_radek.hrac_id = hrac_id THEN
+            
+            IF casova_znacka_oponent IS NULL THEN
+                CONTINUE;
+            END IF;
+            
+            cas_sekundy := cas_sekundy + 
+                                EXTRACT(DAY FROM (tah_radek.cas_zacatku - casova_znacka_oponent)) * 24 * 60 * 60 + 
+                                EXTRACT(HOUR FROM (tah_radek.cas_zacatku - casova_znacka_oponent)) * 60 * 60 +
+                                EXTRACT (MINUTE FROM (tah_radek.cas_zacatku - casova_znacka_oponent)) * 60 + 
+                                EXTRACT (SECOND FROM (tah_radek.cas_zacatku - casova_znacka_oponent));
+        
+        ELSE
+        
+            casova_znacka_oponent := tah_radek.cas_zacatku;
+        
+        END IF;
+        
+    END LOOP;
+    
+    RETURN cas_sekundy;
+
+END;
+/
