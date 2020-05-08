@@ -170,13 +170,13 @@ BEGIN
         
     END LOOP;
     
-    -- DIAGONÁLY - LEVO DOLE -> PRAVO NAHOŘE
-    -- NAD DIAGONÁLOU
+    -- DIAGONALY - LEVO DOLE -> PRAVO NAHORE
+    -- NAD DIAGONALOU
     FOR aktualni_radek IN 0..hra_radek.radek_velikost LOOP
         
         pocet_symbolu := 0;
         
-        FOR krok in 0..hra_radek.sloupec_velikost LOOP --edit
+        FOR krok in 0..hra_radek.sloupec_velikost LOOP
         
             IF (hra_radek.radek_velikost - krok - aktualni_radek) < 0 THEN
                 EXIT;
@@ -208,8 +208,8 @@ BEGIN
         
     END LOOP;  
     
-    -- POD DIAGONÁLOU
-    FOR aktualni_sloupec IN 1..hra_radek.sloupec_velikost LOOP --edit
+    -- POD DIAGONALOU
+    FOR aktualni_sloupec IN 1..hra_radek.sloupec_velikost LOOP
         
         pocet_symbolu := 0;
         
@@ -245,9 +245,9 @@ BEGIN
         
     END LOOP;
     
-    -- DIAGONÁLY - LEVO NAHOŘE -> PRAVO DOLE
-    -- NAD DIAGONÁLOU
-    FOR aktualni_sloupec IN 1..hra_radek.sloupec_velikost LOOP --edit
+    -- DIAGONALY - LEVO NAHORE -> PRAVO DOLE
+    -- NAD DIAGONALOU
+    FOR aktualni_sloupec IN 1..hra_radek.sloupec_velikost LOOP
         
         pocet_symbolu := 0;
         
@@ -283,12 +283,12 @@ BEGIN
         
     END LOOP;
     
-    -- POD DIAGONÁLOU
+    -- POD DIAGONALOU
     FOR aktualni_radek IN 1..hra_radek.radek_velikost LOOP
         
         pocet_symbolu := 0;
         
-        FOR krok in 0..hra_radek.sloupec_velikost LOOP --edit
+        FOR krok in 0..hra_radek.sloupec_velikost LOOP
         
             IF(aktualni_radek + krok) > hra_radek.radek_velikost THEN
                 EXIT;
@@ -322,5 +322,48 @@ BEGIN
     
     RETURN FALSE;
 
+END;
+/
+
+--
+-- Funkce, ktera vraci TRUE, pokud dana hra dospela do remizoveho stavu, jinak vraci FALSE.
+--
+CREATE OR REPLACE FUNCTION remiza ( hra_id IN INTEGER ) RETURN BOOLEAN AS
+
+hra_radek hra%ROWTYPE;
+existuje_tah_radek INTEGER := 0;
+
+BEGIN
+
+    SELECT * INTO hra_radek 
+    FROM hra 
+    WHERE hra.id = hra_id
+        AND rownum = 1;
+        
+    FOR aktualni_radek IN 1..hra_radek.radek_velikost LOOP
+    
+        FOR aktualni_sloupec IN 1..hra_radek.sloupec_velikost LOOP
+            
+            SELECT COUNT(ID) INTO existuje_tah_radek 
+            FROM tah
+            WHERE tah.hra_id = hra_radek.id
+                AND tah.radek_souradnice = aktualni_radek
+                AND tah.sloupec_souradnice = aktualni_sloupec
+                AND rownum = 1;
+                
+            IF existuje_tah_radek = 0 THEN
+                RETURN FALSE;            
+            END IF;
+            
+        END LOOP;
+        
+    END LOOP;
+    
+    UPDATE hra
+    SET stav_id = 4
+    WHERE id = hra_radek.id;
+    
+    RETURN TRUE;
+    
 END;
 /
