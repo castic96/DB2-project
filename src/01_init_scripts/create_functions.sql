@@ -412,3 +412,54 @@ BEGIN
 
 END;
 /
+
+--
+-- Funkce, ktera pri chybe vraci chybovy kod, jinak vraci hodnotu 0.
+--
+CREATE OR REPLACE FUNCTION spatny_parametr ( radek_velikost IN INTEGER, 
+    sloupec_velikost IN INTEGER, symbol_velikost IN INTEGER ) RETURN INTEGER AS
+
+omezeni_radek omezeni%ROWTYPE;
+    
+BEGIN
+
+    SELECT * INTO omezeni_radek 
+    FROM omezeni 
+    WHERE omezeni.id = 1;
+    
+    IF radek_velikost < omezeni_radek.radek_min THEN
+        RETURN 1;
+    END IF;
+    
+    IF radek_velikost > omezeni_radek.radek_max THEN
+        RETURN 2;
+    END IF;
+    
+    IF sloupec_velikost < omezeni_radek.sloupec_min THEN
+        RETURN 3;
+    END IF;
+    
+    IF sloupec_velikost > omezeni_radek.sloupec_max THEN
+        RETURN 4;
+    END IF;
+    
+    IF symbol_velikost < omezeni_radek.symbol_min THEN
+        RETURN 5;
+    END IF;
+    
+    IF symbol_velikost > omezeni_radek.symbol_max THEN
+        RETURN 6;
+    END IF;
+    
+    IF symbol_velikost > sloupec_velikost THEN
+        RETURN 7;
+    END IF;
+    
+    IF symbol_velikost > radek_velikost THEN
+        RETURN 8;
+    END IF;
+    
+    RETURN 0;
+
+END;
+/
