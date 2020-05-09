@@ -359,10 +359,6 @@ BEGIN
         
     END LOOP;
     
-    UPDATE hra
-    SET stav_id = 4
-    WHERE id = hra_radek.id;
-    
     RETURN TRUE;
     
 END;

@@ -66,3 +66,68 @@ BEGIN
 
 END;
 /
+
+--
+-- Procedura, ktera spocita herni casy prave dokoncene hry.
+--
+CREATE OR REPLACE PROCEDURE konec_hry ( hra_id IN INTEGER, hrac_id IN INTEGER ) AS
+
+hra_radek hra%ROWTYPE;
+    
+BEGIN
+
+    SELECT * INTO hra_radek 
+    FROM hra 
+    WHERE hra.id = hra_id
+        AND rownum = 1;
+        
+    UPDATE hra
+    SET 
+        cas_hrac_1 = herni_cas ( hra_id, hra_radek.hrac_id_1 ),
+        cas_hrac_2 = herni_cas ( hra_id, hra_radek.hrac_id_2 )
+    WHERE id = hra_id;
+
+END;
+/
+
+--
+-- Procedura, ktera aktualizuje stav dokoncene hry.
+--
+CREATE OR REPLACE PROCEDURE aktualizuj_stav_hry ( hra_id IN INTEGER, hrac_id IN INTEGER DEFAULT NULL ) AS
+
+hrac_id_prvni_tah INTEGER;
+    
+BEGIN
+        
+    IF hrac_id IS NULL THEN
+    
+        UPDATE hra
+        SET stav_id = 4
+        WHERE id = hra_id;
+        
+    ELSE
+    
+        SELECT hrac_id INTO hrac_id_prvni_tah
+        FROM tah
+        WHERE tah.hra_id = hra_id
+            AND rownum = 1
+        ORDER BY tah.id;
+        
+        IF hrac_id_prvni_tah = hrac_id THEN
+            
+            UPDATE hra
+            SET stav_id = 2
+            WHERE id = hra_id;
+                
+        ELSE
+        
+            UPDATE hra
+            SET stav_id = 3
+            WHERE id = hra_id;
+        
+        END IF;
+        
+    END IF;
+
+END;
+/
