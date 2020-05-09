@@ -51,3 +51,17 @@ BEGIN
     
 END;
 /
+
+--
+-- Trigger, ktery hlida tah hrace, aby byl jeho tah platny.
+--
+CREATE OR REPLACE TRIGGER zkontroluj_tah_hrace
+    BEFORE INSERT ON tah
+    FOR EACH ROW
+    
+BEGIN
+    
+    zabran_tahu ( :new.hra_id, :new.hrac_id, :new.radek_souradnice, :new.sloupec_souradnice );
+    
+END;
+/
