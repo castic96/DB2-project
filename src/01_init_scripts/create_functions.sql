@@ -68,7 +68,7 @@ BEGIN
         AND rownum = 1;
 
     FOR aktualni_radek IN 1..hra_radek.radek_velikost LOOP
-        papir_vypis := papir_vypis|| radek_papiru ( hra_id, aktualni_radek )|| chr(10);
+        papir_vypis := papir_vypis|| radek_papiru ( hra_radek.id, aktualni_radek )|| chr(10);
     END LOOP;
     
     RETURN papir_vypis;

@@ -83,9 +83,9 @@ BEGIN
         
     UPDATE hra
     SET 
-        cas_hrac_1 = herni_cas ( hra_id, hra_radek.hrac_id_1 ),
-        cas_hrac_2 = herni_cas ( hra_id, hra_radek.hrac_id_2 )
-    WHERE id = hra_id;
+        cas_hrac_1 = herni_cas ( hra_radek.id, hra_radek.hrac_id_1 ),
+        cas_hrac_2 = herni_cas ( hra_radek.id, hra_radek.hrac_id_2 )
+    WHERE id = hra_radek.id;
 
 END;
 /
