@@ -23,11 +23,13 @@ CREATE OR REPLACE TRIGGER vyhodnot_stav_hry
         IF vyhra ( hra_id_prom, hrac_id_prom ) THEN
             konec_hry ( hra_id_prom, hrac_id_prom );
             aktualizuj_stav_hry ( hra_id_prom, hrac_id_prom );
+            statistiky ( hra_id_prom );
         END IF;
     
         IF remiza ( hra_id_prom ) THEN
             konec_hry ( hra_id_prom, hrac_id_prom );
             aktualizuj_stav_hry ( hra_id_prom );
+            statistiky ( hra_id_prom );
         END IF;
     
     END AFTER STATEMENT;
