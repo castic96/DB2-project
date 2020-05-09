@@ -108,11 +108,10 @@ BEGIN
         
     ELSE
     
-        SELECT hrac_id INTO hrac_id_prvni_tah
-        FROM tah
-        WHERE tah.hra_id = hra_id_prom
-            AND rownum = 1
-        ORDER BY tah.id;
+        SELECT t1.hrac_id INTO hrac_id_prvni_tah
+        FROM tah t1
+		WHERE t1.id = 
+			( SELECT MIN(t2.id) FROM tah t2 WHERE t2.hra_id = hra_id_prom );
         
         IF hrac_id_prvni_tah = hrac_id THEN
             
@@ -148,12 +147,11 @@ BEGIN
     FROM hra 
     WHERE hra.id = hra_id
         AND rownum = 1;
-        
-    SELECT hrac_id INTO hrac_id_prvni
-    FROM tah
-    WHERE tah.hra_id = hra_radek.id
-        AND rownum = 1
-    ORDER BY tah.id;
+		
+	SELECT t1.hrac_id INTO hrac_id_prvni
+	FROM tah t1
+	WHERE t1.id = 
+		( SELECT MIN(t2.id) FROM tah t2 WHERE t2.hra_id = hra_radek.id );
     
     IF hrac_id_prvni = hra_radek.hrac_id_1 THEN
     

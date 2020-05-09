@@ -182,7 +182,7 @@ BEGIN
                 EXIT;
             END IF;
             
-            SELECT COUNT(ID) INTO existuje_tah_radek 
+            SELECT COUNT(id) INTO existuje_tah_radek 
             FROM tah
             WHERE tah.hra_id = hra_radek.id
                 AND tah.hrac_id = hrac_id_prom
@@ -219,7 +219,7 @@ BEGIN
                 EXIT;
             END IF;
             
-            SELECT COUNT(ID) INTO existuje_tah_radek
+            SELECT COUNT(id) INTO existuje_tah_radek
             FROM tah 
             WHERE tah.hra_id = hra_radek.id
                 AND tah.hrac_id = hrac_id_prom
@@ -257,7 +257,7 @@ BEGIN
                EXIT;
             END IF;
             
-            SELECT COUNT(ID) INTO existuje_tah_radek
+            SELECT COUNT(id) INTO existuje_tah_radek
             FROM tah 
             WHERE tah.hra_id = hra_radek.id
                 AND tah.hrac_id = hrac_id_prom
@@ -294,7 +294,7 @@ BEGIN
                 EXIT;
             END IF;
             
-            SELECT COUNT(ID) INTO existuje_tah_radek
+            SELECT COUNT(id) INTO existuje_tah_radek
             FROM tah 
             WHERE tah.hra_id = hra_radek.id
                 AND tah.hrac_id = hrac_id_prom
@@ -344,7 +344,7 @@ BEGIN
     
         FOR aktualni_sloupec IN 1..hra_radek.sloupec_velikost LOOP
             
-            SELECT COUNT(ID) INTO existuje_tah_radek 
+            SELECT COUNT(id) INTO existuje_tah_radek 
             FROM tah
             WHERE tah.hra_id = hra_radek.id
                 AND tah.radek_souradnice = aktualni_radek
