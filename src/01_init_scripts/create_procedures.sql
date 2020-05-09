@@ -196,6 +196,82 @@ BEGIN
             UPDATE hrac
             SET remiza_nezacinal = remiza_nezacinal + 1
             WHERE id = hrac_id_druhy;
+			
+		ELSE NULL;
+        
+    END CASE;
+
+END;
+/
+
+--
+-- Procedura, ktera zabrani vytvoreni nove hry, pokud je libovolny 
+-- z parametru hry spatne nastaven.
+--
+CREATE OR REPLACE PROCEDURE zabran_hre ( radek_velikost IN INTEGER, 
+    sloupec_velikost IN INTEGER, symbol_velikost IN INTEGER ) AS
+    
+omezeni_radek omezeni%ROWTYPE;
+cislo_chyby INTEGER;
+zprava_chyby NVARCHAR2(256);
+    
+BEGIN
+
+    SELECT * INTO omezeni_radek 
+    FROM omezeni 
+    WHERE omezeni.id = 1;
+    
+    CASE spatny_parametr ( radek_velikost, sloupec_velikost, symbol_velikost )
+    
+        WHEN 1 THEN
+        
+            cislo_chyby := -20001;
+            zprava_chyby := 'Prilis maly pocet radku na papiru (mensi nez '|| TO_CHAR(omezeni_radek.radek_min)|| ').';
+            raise_application_error(cislo_chyby, zprava_chyby);
+            
+        WHEN 2 THEN
+        
+            cislo_chyby := -20002;
+            zprava_chyby := 'Prilis velky pocet radku na papiru (vetsi nez '|| TO_CHAR(omezeni_radek.radek_max)|| ').';
+            raise_application_error(cislo_chyby, zprava_chyby);
+        
+        WHEN 3 THEN
+        
+            cislo_chyby := -20003;
+            zprava_chyby := 'Prilis maly pocet sloupcu na papiru (mensi nez '|| TO_CHAR(omezeni_radek.sloupec_min)|| ').';
+            raise_application_error(cislo_chyby, zprava_chyby);
+        
+        WHEN 4 THEN
+        
+            cislo_chyby := -20004;
+            zprava_chyby := 'Prilis velky pocet sloupcu na papiru (vetsi nez '|| TO_CHAR(omezeni_radek.sloupec_max)|| ').';
+            raise_application_error(cislo_chyby, zprava_chyby);
+            
+        WHEN 5 THEN
+        
+            cislo_chyby := -20005;
+            zprava_chyby := 'Prilis maly pocet znaku ve vitezne rade (mensi nez '|| TO_CHAR(omezeni_radek.symbol_min)|| ').';
+            raise_application_error(cislo_chyby, zprava_chyby);
+        
+        WHEN 6 THEN
+        
+            cislo_chyby := -20006;
+            zprava_chyby := 'Prilis velky pocet znaku ve vitezne rade (vetsi nez '|| TO_CHAR(omezeni_radek.symbol_max)|| ').';
+            raise_application_error(cislo_chyby, zprava_chyby);
+            
+        WHEN 7 THEN
+        
+            cislo_chyby := -20007;
+            zprava_chyby := 'Vitezna rada delsi, nez sirka papiru).';
+            raise_application_error(cislo_chyby, zprava_chyby);
+            
+        WHEN 8 THEN
+        
+            cislo_chyby := -20008;
+            zprava_chyby := 'Vitezna rada delsi, nez vyska papiru).';
+            raise_application_error(cislo_chyby, zprava_chyby);
+            
+        ELSE NULL;
         
     END CASE;
 

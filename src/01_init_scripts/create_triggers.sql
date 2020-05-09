@@ -37,3 +37,17 @@ CREATE OR REPLACE TRIGGER vyhodnot_stav_hry
     
 END vyhodnot_stav_hry;
 /
+
+--
+-- Trigger, ktery hlida parametry nove hry pri vytvoreni, jestli splnuji dana omezeni.
+--
+CREATE OR REPLACE TRIGGER zkontroluj_parametry_hry
+    BEFORE INSERT ON hra
+    FOR EACH ROW
+    
+BEGIN
+    
+    zabran_hre ( :new.radek_velikost, :new.sloupec_velikost, :new.symbol_velikost );
+    
+END;
+/
