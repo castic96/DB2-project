@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="019B3A85-CEF3-0AAB-5B5D-3F499800F729" name="hra">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:06:58 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="25257035-E31B-DE39-D2FE-F4BB05BB8CA9">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stav_id" id="FB638A71-B8F0-CC92-8D61-4C5C61BDB016">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21E6D2D0-1F58-43D4-C1BE-96CC0837D974" referredColumn="79D651EF-DE7A-AB9C-5DAA-F49301A33013"/>
+</associations>
+</Column>
+<Column name="hrac_id_1" id="9250164F-FAF0-431A-A1DB-D3D598F5757F">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B16F6823-0576-F0EE-3EF8-B37E78C3C5D4" referredColumn="10D12CB0-ED41-95E0-1101-9C5B2B427CBA"/>
+</associations>
+</Column>
+<Column name="hrac_id_2" id="47E09EDE-0735-6F19-5968-59EB46073C1C">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C15180AA-F23E-440B-69F1-BDCA7BB19D54" referredColumn="10D12CB0-ED41-95E0-1101-9C5B2B427CBA"/>
+</associations>
+</Column>
+<Column name="cas_hrac_1" id="24F436A8-C957-D278-44B1-249E858592E5">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cas_hrac_2" id="40F4D43A-EBE7-015C-0941-592AF8395C6B">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="radek_velikost" id="07CAB7D0-3922-D77E-CC29-5452DB8C3260">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sloupec_velikost" id="24BFA0D3-ADF3-EA49-841C-AACB0DC5DCA0">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="symbol_velikost" id="A40C8568-5CD9-807B-BF18-DF9DD4249AAF">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="49C4655C-94C4-67F0-6213-D8051CFF20C2" name="PK_hra_id">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:15:31 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25257035-E31B-DE39-D2FE-F4BB05BB8CA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D546B57B-0F1F-BA6E-1CA1-BDDB7EBEEEDB" name="FK_hra__stav_id__stav">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:40:10 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB638A71-B8F0-CC92-8D61-4C5C61BDB016"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73E87F31-3D75-8747-F78C-6EA59087E295" name="FK_hra__hrac_id_1__hrac">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:41:49 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9250164F-FAF0-431A-A1DB-D3D598F5757F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CCA82FE-865B-466B-87BA-DD2DD2733950" name="FK_hra__hrac_id_2__hrac">
+<createdBy>Zdenda</createdBy>
+<createdTime>2020-05-06 15:42:52 UTC</createdTime>
+<ownerDesignName>data_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47E09EDE-0735-6F19-5968-59EB46073C1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
