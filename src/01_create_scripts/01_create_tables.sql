@@ -85,9 +85,9 @@ ALTER TABLE tah
     ADD CONSTRAINT fk_tah__hrac_id__hrac FOREIGN KEY ( hrac_id )
         REFERENCES hrac ( id );
 
-DROP SEQUENCE hrac_id_seq;
+DROP SEQUENCE hra_id_seq;
 
-CREATE SEQUENCE hrac_id_seq START WITH 1 NOCACHE ORDER;
+CREATE SEQUENCE hra_id_seq START WITH 1 NOCACHE ORDER;
 
 CREATE OR REPLACE TRIGGER hra_id_trg BEFORE
     INSERT ON hra

@@ -48,3 +48,9 @@ EXEC proved_tah(101, 1001, 9, 5);
 
 -- Pokus o provedeni tahu hrace 1002 do hry 101 na jiz obsazene policko.
 EXEC proved_tah(101, 1002, 10, 5);
+
+-- Vyprazdneni tabulky tah pro hry s id 101 a 102.
+DELETE FROM tah WHERE hra_id = 101 OR hra_id = 102;
+
+-- Vyprazdneni tabulky hra pro id 101 a 102.
+DELETE FROM hra WHERE id = 101 OR id = 102;
