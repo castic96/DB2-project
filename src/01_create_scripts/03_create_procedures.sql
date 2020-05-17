@@ -50,7 +50,7 @@ END;
 /
 
 --
--- Pomocna procedura pro tah.
+-- Pomocna procedura pro realizaci tahu.
 --
 CREATE OR REPLACE PROCEDURE proved_tah ( hra_id IN INTEGER, hrac_id IN INTEGER, radek_souradnice IN INTEGER, 
     sloupec_souradnice IN INTEGER ) AS
@@ -260,13 +260,13 @@ BEGIN
         WHEN 7 THEN
         
             cislo_chyby := -20007;
-            zprava_chyby := 'Vitezna rada delsi, nez sirka papiru).';
+            zprava_chyby := 'Vitezna rada delsi, nez sirka papiru.';
             raise_application_error(cislo_chyby, zprava_chyby);
             
         WHEN 8 THEN
         
             cislo_chyby := -20008;
-            zprava_chyby := 'Vitezna rada delsi, nez vyska papiru).';
+            zprava_chyby := 'Vitezna rada delsi, nez vyska papiru.';
             raise_application_error(cislo_chyby, zprava_chyby);
             
         ELSE NULL;
