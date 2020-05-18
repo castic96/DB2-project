@@ -10,7 +10,6 @@ Semestrální práce z předmětu KIV/DB2.
 		- `03_create_procedures.sql`,
 		- `04_create_views.sql`,
 		- `05_create_triggers.sql`,
-		- `01_create_tables.sql`,
 	- `src\02_init_data_scripts`:
 		- `01_insert_init_data`.
 
